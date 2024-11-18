@@ -5,7 +5,7 @@ services:
     environment:
       - NTFY_URL=${NTFY_URL}
       - NTFY_TOPIC=${NTFY_TOPIC}
-      - NTFY_USER=
-      - NTFY_PASSWORD=
+      - NTFY_USER=${NTFY_USER}
+      - NTFY_PASSWORD=${NTFY_PASSWORD}
     ports:
       - "7000:7000"
