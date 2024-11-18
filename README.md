@@ -22,10 +22,10 @@ file_paths = [
 environment = """
   ## Required
 
-  # Your Gotify instance URL
+  # Your ntfy instance URL
   NTFY_URL = https://ntfy.example.com
 
-  # App Token created for Komodo
+  # Topic to be used for for Komodo
   NTFY_TOPIC = MyTopic
 
   ## Optional
@@ -34,7 +34,7 @@ environment = """
   #NTFY_USER=[[NTFY_USER]]
   #NTFY_PASSWORD=[[NTFY_PASSWORD]]
 
-  # Set the Gotify Priority level based on Komodo alert severity
+  # Set the ntfy Priority level based on Komodo alert severity
   #NTFY_OK_PRIORITY=3
   #NTFY_WARNING_PRIORITY=5
   #NTFY_CRITICAL_PRIORITY=8
