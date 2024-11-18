@@ -1,0 +1,11 @@
+services:
+  komodo-ntfy:
+    image: foxxmd/komodo-ntfy-alerter:latest
+    restart: unless-stopped
+    environment:
+      - NTFY_URL=${NTFY_URL}
+      - NTFY_TOPIC=${NTFY_TOPIC}
+      - NTFY_USER=
+      - NTFY_PASSWORD=
+    ports:
+      - "7000:7000"
