@@ -7,5 +7,6 @@ services:
       - NTFY_TOPIC=${NTFY_TOPIC}
       - NTFY_USER=${NTFY_USER}
       - NTFY_PASSWORD=${NTFY_PASSWORD}
+      - NTFY_TOKEN=${NTFY_TOKEN}
     ports:
       - "7000:7000"

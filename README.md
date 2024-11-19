@@ -4,6 +4,8 @@ Part of the [*Komodo Hub* collection.](https://github.com/komodo-hub/komodo-hub)
 
 Deploys an [Alerter](https://komo.do/docs/resources#alerter) that pushes to [ntfy](https://ntfy.sh/). Docker image built from [foxxmd/komodo-utilities](https://github.com/FoxxMD/komodo-utilities).
 
+Supports optional authentication via query param, username/password, and access token.
+
 ## Requirements
 
 * A running ntfy instance ([installation docs](https://docs.ntfy.sh/))
@@ -22,19 +24,23 @@ file_paths = [
 environment = """
   ## Required
 
-  # Your ntfy instance URL
+  ## Your ntfy instance URL
   NTFY_URL = https://ntfy.example.com
 
-  # Topic to be used for for Komodo
+  ## Topic to be used for for Komodo
   NTFY_TOPIC = MyTopic
 
   ## Optional
 
-  # Auth
+  ## Auth
+
+  ## https://docs.ntfy.sh/publish/#username-password
   #NTFY_USER=[[NTFY_USER]]
   #NTFY_PASSWORD=[[NTFY_PASSWORD]]
+  ## https://docs.ntfy.sh/publish/#access-tokens
+  #NTFY_TOKEN=[[NTFY_TOKEN]]
 
-  # Set the ntfy Priority level based on Komodo alert severity
+  ## Set the ntfy Priority level based on Komodo alert severity
   #NTFY_OK_PRIORITY=3
   #NTFY_WARNING_PRIORITY=5
   #NTFY_CRITICAL_PRIORITY=8
@@ -48,6 +54,11 @@ is_secret = true
 [[variable]]
 name = "NTFY_PASSWORD"
 value = "MyPass"
+is_secret = true
+
+[[variable]]
+name = "NTFY_TOKEN"
+value = "MyAccessToken"
 is_secret = true
 
 [[alerter]]
