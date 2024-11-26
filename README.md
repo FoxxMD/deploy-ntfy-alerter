@@ -40,10 +40,15 @@ environment = """
   ## https://docs.ntfy.sh/publish/#access-tokens
   #NTFY_TOKEN=[[NTFY_TOKEN]]
 
+  # Below need to add to `compose.yaml` as well
+
   ## Set the ntfy Priority level based on Komodo alert severity
   #NTFY_OK_PRIORITY=3
   #NTFY_WARNING_PRIORITY=5
   #NTFY_CRITICAL_PRIORITY=8
+
+  # Set whether to include Komodo Severity Level in notification title
+  #LEVEL_IN_TITLE=true
 """
 
 [[variable]]
