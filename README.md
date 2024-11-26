@@ -1,4 +1,4 @@
-# Deploy a Gotify [Alerter](https://komo.do/docs/resources#alerter)
+# Deploy a ntfy [Alerter](https://komo.do/docs/resources#alerter)
 
 Part of the [*Komodo Hub* collection.](https://github.com/komodo-hub/komodo-hub)
 
